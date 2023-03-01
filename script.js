@@ -23,7 +23,8 @@ closeModalButton.addEventListener('click', hideModal)
 
 // Añadir listener para la tecla 'Escape'
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') {
+  if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
     hideModal()
   }
+  event.stopPropagation
 })
