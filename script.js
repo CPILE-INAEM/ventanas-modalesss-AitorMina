@@ -20,3 +20,10 @@ modalButtons.forEach((button) => button.addEventListener('click', showModal))
 
 // Añadir listener para el botón que cierra la ventana modal
 closeModalButton.addEventListener('click', hideModal)
+
+// Añadir listener para la tecla 'Escape'
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    hideModal()
+  }
+})
